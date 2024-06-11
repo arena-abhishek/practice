@@ -8,6 +8,6 @@ while (i<100) {
 if (+) {
   
 }    
-else if (- ) {
+else if (-) {
   console.log()
 }

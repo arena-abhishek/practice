@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="temp.js"></script>
+    </head>
+    <body>
+        <button onclick="fun()">click me</button>
+        <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cum
+            eius maiores eos veniam ex aliquid praesentium, quasi neque
+            provident molestiae iste asperiores in quod quibusdam aperiam fugit
+            blanditiis non.</p>
+    </body>
+    <script>
+        let para = document.getElementById('para');
+        function fun()
+        {
+            if(para.style.color === '')
+            {
+                para.style.color = 'red';
+            }
+            else if(para.style.color === 'red')
+            {
+                para.style.color = 'green';
+            }
+            else if(para.style.color === 'green')
+            {
+                para.style.color = 'orange'
+            }
+        }
+    </script>
+</html>
