@@ -1,4 +1,4 @@
-let obj1 = {
+/* let obj1 = {
     1:"Crazy",
   2 : "Amazing",
   3 : "Fire"
@@ -24,7 +24,7 @@ let obj1 = {
   
   
   console.log(obj1[ran1] + " " + obj2[ran2] + " " + obj3[ran3]);
-
+ */
   /* var a = 0;
   function fun(){
    if(a == 1)
@@ -41,3 +41,4 @@ let obj1 = {
    }
 }
  */
+

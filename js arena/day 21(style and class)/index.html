@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Style && class</title>
+    <style>
+        .notification{
+            position:fixed;
+            z-index: 1;
+            background:white ;
+            padding: 5px;
+            text-align: center;
+            border: 2px solid black;
+            font-size: 20px;    
+        }
+        .welcome{
+            background: #b80000;
+            color: yellow;
+        }
+    </style>
+  </head>
+  <body>
+    <h2>Notification is on right place</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus totam ut
+      vitae vero molestias, fugit tenetur magni magnam minima inventore
+      cupiditate ea distinctio eligendi assumenda dolores! Error, quam omnis
+      reprehenderit itaque minima adipisci voluptatem nemo quis facere ducimus,
+      ea odio corrupti pariatur iste fugiat repellendus unde autem inventore,
+      incidunt obcaecati nihil? Cumque voluptatem ut pariatur dolore a repellat
+      illo quia dolores saepe similique? Blanditiis ad quasi qui.
+    </p>
+    <script>
+      function showNotification({top = 0 , right = 0 , html, className}) {
+        let notification = document.createElement("div");
+        notification.className = "notification";
+        if (className) {
+          notification.classList.add(className);
+        }
+        notification.style.top = top + "px";
+        notification.style.right = right + "px";
+        notification.innerHTML = html;
+        document.body.append(notification);
+        setTimeout(() => notification.remove(), 1500);
+      }
+      let i = 1;
+      setInterval(() => {
+        showNotification({
+          top: 10,
+          right: 10,
+          html: 'hello' + i++,
+          className: 'welcome'
+        });
+      }, 2000);
+    </script>
+  </body>
+</html>
