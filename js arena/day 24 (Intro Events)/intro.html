@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction to events</title>
+    <style>
+      /* <!-- task --- 4 --> */
+      body {
+        height: 2000px;
+      }
+      #field {
+        height: 400px;
+        width: 100%;
+        border: 10px solid black;
+        background-color: #00ff00;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        background-image: url(download.png);
+      }
+      #ball {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 40px;
+        height: 40px;
+        transition: 1s all;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- task --- 1 -->
+    <!--     <input type="button" id="hider" value=" Click to hide text">
+    <div id="text">text</div>
+    <script>
+        let = document.getElementById("hider").onclick = function(){
+            document.getElementById("text").hidden = true;
+        }
+    </script> -->
+
+    <!-- task --- 2 -->
+    <!-- type 1 -->
+    <!-- 
+    <input type="button" id="hider" value="click to hide button" />
+    <script>
+      hider.onclick = function () {
+        document.getElementById("hider").hidden = true;
+      };
+    </script> -->
+
+    <!-- type 2 -->
+    <!-- <input type="button" onclick="this.hidden=true" value="click to hide button"> -->
+
+    <!-- task --- 3 -->
+    <!--      <button id="button">alick</button>
+     <script>
+         function handler(){
+            alert(1);
+         }
+         button.addEventListener("click",handler);
+         button.removeEventListener("click",handler); 
+        </script>
+-->
+    <!-- task --- 4 -->
+    <h1>
+      Click on a field to move the ball there <br />the ball should never leave
+      the field
+    </h1>
+
+    <div id="field">
+      <img src="https://en.js.cx/clipart/ball.svg" id="ball" /> . .
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
