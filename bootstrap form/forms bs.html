@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BOOTSTRAP FORM</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <form class="m-3">
+      <div>
+        <label for="input your email" class="form-label">E-mail Address</label>
+        <input
+          type="email"
+          class="form-control"
+          id="input your email"
+          aria-describedby="emailHelp"
+        />
+        <div id="emailHelp" class="form-text">
+          We'll never share your email with anyone else.
+        </div>
+      </div>
+      <div>
+        <label for="input your email" class="form-label mt-4">password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="input your email"
+          aria-describedby="emailHelp"
+        />
+      </div>
+
+      <input
+        type="checkbox"
+        class="form-check-input mt-4"
+        id="example check-1"
+      />
+      <label for="example check-1" class="form-check-label mt-4 fw-dark"
+        >Check me out</label
+      ><br />
+
+      <div class="btn bg-primary mt-3 text-dark">Submit</div>
+    </form>
+
+    <!-- FORM CONTROLS  -->
+    <h3>Making form with controls</h3>
+    <form action="#">
+      <label for="input" class="form-label">Email Address</label><br />
+      <input
+        type="email"
+        class="form-control"
+        id="input"
+        aria-describedby="emailHelp"
+      />
+      <textarea
+        class="form-control mt-5 border-outline-danger"
+        rows="5"
+        id="input"
+      ></textarea>
+    </form>
+
+    <!-- Sizing giving to forms -->
+
+    <form action="#">
+      <input type="text" class="form-control form-control-lg" />
+    </form>
+
+    <!-- choosing file input -->
+
+    <label for="formFile" class="form-label">Default file input </label><br />
+    <input type="file" id="formFile" class="form-control" />
+
+    <!-- Data list -->
+    <h3>Making data list through form</h3>
+    <label for="dataList" class="form-label">Datalist Example</label>
+    <input
+      placeholder="Type here to search"
+      id="dataList"
+      list="datalistoption"
+      class="mb-5"
+    />
+    <datalist id="datalistoption"> 
+        <option value="South Africa"></option>
+        <option value="New York"></option>
+        <option value="America"></option>
+    </datalist>
+  </body>
+</html>
