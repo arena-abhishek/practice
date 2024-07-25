@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fade in and out</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".fadeIn").click(function () {
+          $("p").fadeIn();
+        });
+        $(".fadeOut").click(function () {
+          $("p").fadeOut();
+        });
+        $(".fadeToggle").click(function () {
+          $("#div1").fadeToggle();
+          $("#div2").fadeToggle("slow");
+          $("#div3").fadeToggle(3000);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p>If you click on the "Hide" button, I will disappear.</p>
+
+    <button class="fadeIn">fade In</button>
+    <button class="fadeOut">fade out</button>
+    <p>Demonstrate fadeToggle() with different speed parameters.</p>
+
+<button class="fadeToggle">Click to fade in/out boxes</button><br><br>
+
+<div id="div1" style="width:80px;height:80px;background-color:red;"></div>
+<br>
+<div id="div2" style="width:80px;height:80px;background-color:green;"></div>
+<br>
+<div id="div3" style="width:80px;height:80px;background-color:blue;"></div>
+
+  </body>
+</html>
