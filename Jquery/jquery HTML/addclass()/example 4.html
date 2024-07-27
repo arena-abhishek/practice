@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change the class name of an element</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+    $("button").click(function(){
+      $("p:last").removeClass("intro").addClass("main");
+    });
+  });
+  </script>
+  <style>
+  .intro {
+    color: red;
+  }
+  .main {
+    background-color: yellow;
+  }
+  </style>
+  </head>
+  <body>
+  
+  <h1>This is a heading</h1>
+  
+  <p>This is another paragraph.</p>
+  <p class="intro">This is a paragraph.</p>
+  
+  <button>Change class name of the last p element</button>
+  
+  
+</body>
+</html>

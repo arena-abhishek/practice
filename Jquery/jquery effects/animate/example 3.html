@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Animate Alternate syntax</title>
+    <script>
+    $(document).ready(function(){
+    $("#btn").click(function(){
+      $("#box").animate({
+        height:"300px",
+        width:"300px"
+      },{
+        duration:5000,
+        easing:"linear",
+        complete:function(){
+          $(this).after("<p>Animation is complete!</P>");
+        }
+      });
+    }) ;     
+    });
+  </script>
+  </head>
+  <body>
+    <button id="btn">Animate height and width</button>
+
+    <div id="box"
+      style="background:#98bf21;height:100px;width:100px;margin:6px;"></div>
+  </body>
+</html>

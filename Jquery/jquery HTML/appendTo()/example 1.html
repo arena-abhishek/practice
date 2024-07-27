@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>appendto</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+    $("button").click(function(){
+      $("h1").appendTo("p");
+    });
+  });
+  </script>
+  </head>
+  <body>
+  
+  <h1>This is a heading</h1>
+  
+  <p>This is a paragraph.</p>
+  <p>This is another paragraph.</p>
+  
+  <button>Move and insert the h1 element at the end of each p element</button>
+  
+</body>
+</html>

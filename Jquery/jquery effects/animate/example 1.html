@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Animate</title>
+    <script>
+    $(document).ready(function(){
+      $("#btn1").click(function(){
+         $("#box").animate({height:"300px"});
+      });
+      $("#btn2").click(function(){
+         $("#box").animate({height:"100px"});
+      });
+    })
+  </script>
+  </head>
+  <body>
+    <button id="btn1">Animate height</button>
+    <button id="btn2">Reset height</button>
+
+   
+  </body>
+</html>

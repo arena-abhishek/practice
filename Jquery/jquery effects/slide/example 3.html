@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slide</title>
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+  $(document).ready(function(){
+  $(".btn1").click(function(){
+    $("p").slideUp(1000, function(){
+      alert('The slideUp() method is finished!'); 
+    });
+  });
+  $(".btn2").click(function(){
+    $("p").slideDown(1000, function(){
+      alert('The slideDown() method is finished!'); 
+    });
+  });
+  $(".btn3").click(function(){alert('The slideUp() method is finished!'); 
+    $("p").slideToggle(1000, function(){
+      alert('The slideToggle() method is finished!'); 
+    });
+  });
+});
+  </script>
+  </head>
+  <body>
+    <p>This is a paragraph. Lorem ipsum dolor sit amet consectetur adipisicing
+      elit. Non beatae, velit accusamus accusantium nemo facilis autem quasi
+      possimus voluptas numquam veritatis, molestiae nesciunt labore quae
+      eligendi quibusdam mollitia?</p>
+
+    <button class="btn1">Slide up</button>
+    <button class="btn2">Slide down</button>
+    <button class="btn3">Slide toggle</button>
+
+  </body>
+</html>

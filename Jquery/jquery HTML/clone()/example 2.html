@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>clone copy an element including event handlers</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+    $("button").click(function(){
+      $("body").append($("p:first").clone(true));
+    });
+    $("p").click(function(){
+      $(this).animate({fontSize: "+=1px"});
+    });
+  });
+  </script>
+  </head>
+  <body>
+  
+  <p>Click this paragraph to increase text size.</p>
+  <p>This is another paragraph.</p>
+  
+  <button>Copy the first p element (including event handlers), and append to body element</button>
+  
+  
+</body>
+</html>

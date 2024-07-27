@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atrribute</title>
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+  $(document).ready(function(){
+    $(".btn").click(function(){
+      alert("Image width: " + $("img").attr("width"));
+    });
+    $(".btn1").click(function(){
+      alert($("p").css("color"));
+    });
+  });
+  </script>
+  </head>
+  <body>
+
+    <img src="https://picsum.photos/id/237/200/300" alt="black dog" width="284"
+      height="213"><br>
+
+    <button class="btn">Decrease image width by 50px</button>
+    <button class="btn1">Set the color property of all p elements</button>
+
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+
+  </body>
+</html>
