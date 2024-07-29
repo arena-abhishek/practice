@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>offset</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".btn1").click(function () {
+          var x = $("p").offset();
+          alert("Top" + x.top + "Left:" + x.left);
+        });
+        $(".btn2").click(function () {
+          //set the offset coordinates
+          $("p").offset({
+            top: 200,
+            left: 200,
+          });
+        });
+        $(".btn3").click(function () {
+          //set offset coordinates using a function
+          $("p").offset(function (n, c) {
+            newPos = new Object();
+            newPos.left = c.left + 100;
+            newPos.top = c.top + 100;
+            return newPos;
+          });
+        });
+        $(".btn4").click(function () {
+          //Set the offset coordinates for an element using an object
+          $("p").offset(function () {
+            newPos = new Object();
+            newPos.left = "0";
+            newPos.top = "100";
+            $("p").offset(newPos);
+          });
+        });
+        $(".btn5").click(function(){
+          //Set the offset coordinates for an element using the offset coordinates of another element
+          $("p").offset($("span").offset())
+        })
+      });
+    </script>
+  </head>
+  <body>
+    <p>This is a paragraph.</p>
+
+    <button class="btn1">Return the offset coordinates of the p element</button><br>
+    <button class="btn2">Set the offset coordinates of the p element</button><br>
+    <button class="btn3">Set offset coordinates of the p element</button><br>
+    <button class="btn4">
+      Set offset coordinates of the p element using an object
+    </button>
+    <button class="btn5">
+      Set the offset coordinates of the p element equal to the span element
+    </button><br>
+
+    <span style="position: absolute; left: 100px; top: 150px"
+      >This is a span</span
+    >
+  </body>
+</html>

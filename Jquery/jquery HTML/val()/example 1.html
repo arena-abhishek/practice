@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Val()</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".btn1").click(function () {
+          alert($("input:text").val());
+        });
+        $(".btn2").click(function () {
+          // return the value attribute
+          $("input:text").val("Abhishek sharma");
+        });
+        $(".btn3").click(function () {
+          // set the value attribute using a function
+          $("input:text").val(function (n, c) {
+            return c + " Griffin";
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p>Name: <input type="text" name="user" /></p>
+
+    Firstname: <input type="text" name="fname" value="Peter" /><br />
+    Lastname: <input type="text" name="lname" value="Griffin" /><br /><br />
+
+    <p>Name: <input type="text" name="user" value="Peter" /></p>
+    <button class="btn1">Return the value of the first input field</button>
+    <button class="btn2">Set the value of the input field</button>
+    <button class="btn3">Set the value of the input field</button>
+  </body>
+</html>

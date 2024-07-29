@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>remove</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#btn1").click(function () {
+          $("p").remove();
+        });
+        $("#btn2").click(function () {
+          $("p").remove(".test");
+        });
+        $("#btn3").click(function () {
+          $("p").remove(".test, .demo");
+        });
+      });
+    </script>
+    <style>
+      .test {
+        color: red;
+        font-size: 20px;
+      }
+      .demo {
+        color: green;
+        font-size: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+    <p class="test">This is another paragraph.</p>
+    <p class="test">This is another paragraph.</p>
+    <p class="demo">This is p element with class="demo".</p>
+
+    
+    <button id="btn1">Remove all p elements</button>
+    <button id="btn2">Remove all p elements with class="test"</button>
+    <button id="btn3">Remove all p elements with class="test" and class="demo"</button>
+  </body>
+</html>

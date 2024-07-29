@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>add()</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // $("h1").add("p").add("span").css("background-color", "yellow");  //
+        // $("p").add(document.getElementsByTagName("span")[0]).css("background-color", "yellow"); // target with dom
+        // target with append
+        $("button").click(function () {
+          $("p").add("<br><span>A new span element.</span>").appendTo("p");
+        });
+      });
+        </script>
+  </head>
+  <body>
+    <h1>Welcome</h1>
+    <p>A p element.</p>
+    <p>Another p element.</p>
+
+    <span>A span element.</span>
+    <span>A span element.</span><br /><br />
+
+    <div>
+      This example adds the same css style for both p and span elements, as the
+      existing h1 element.
+    </div>
+    <button>Add a span element</button>
+  </body>
+</html>

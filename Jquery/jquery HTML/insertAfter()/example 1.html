@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>insertAfter() and Before()</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+    $("button").click(function(){
+      $("<span>Hello world!</span>").insertAfter("p");
+    });
+  });
+  </script>
+  </head>
+  <body>
+  
+  <button>Insert span element after each p element</button>
+  
+  <p>This is a paragraph.</p>
+  <p>This is another paragraph.</p>
+</body>
+</html>
