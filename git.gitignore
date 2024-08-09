@@ -1,0 +1,6 @@
+# Ignore node_modules directory
+node_modules/
+
+# Ignore credentials file
+package.json
+package-lock.json
