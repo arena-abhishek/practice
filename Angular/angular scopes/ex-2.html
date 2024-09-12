@@ -8,21 +8,21 @@
   </head>
   <body>
     <div ng-app="myApp" ng-controller="myCtrl">
-      Name: <input ng-model="firstname" />
-      <h1>{{firstname}}</h1>
+      <input ng-model="name" />
+
+      <h1>My name is {{name}}</h1>
     </div>
 
     <script>
       var app = angular.module("myApp", []);
       app.controller("myCtrl", function ($scope) {
-        $scope.firstname = "John";
-        $scope.lastname = "Doe";
+        $scope.name = "Abhishek sharma";
       });
     </script>
 
     <p>
-      Change the name inside the input field, and the model data will change
-      automatically, and therefore also the header will change its value.
+      When you change the name in the input field, the changes will affect the
+      model, and it will also affect the name property in the controller.
     </p>
   </body>
 </html>

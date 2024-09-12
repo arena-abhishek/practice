@@ -8,23 +8,21 @@
   </head>
   <body>
     <div ng-app="myApp" ng-controller="myCtrl">
-      <h1 ng-click="changeName()">{{firstname}}</h1>
+      <ul>
+        <li ng-repeat="x in names">{{x}}</li>
+      </ul>
     </div>
 
     <script>
       var app = angular.module("myApp", []);
       app.controller("myCtrl", function ($scope) {
-        $scope.firstname = "John";
-        $scope.changeName = function () {
-          $scope.firstname = "Nelly";
-        };
+        $scope.names = ["John", "Anna", "Peter", "Linda","abhishek", "sujal","nitin", "mannu"];
       });
     </script>
 
-    <p>Click on the header to run the "changeName" function.</p>
-
     <p>
-      This example demonstrates how to use the controller to change model data.
+      The variable "x" has a different value for each repetition, proving that
+      each repetition has its own scope.
     </p>
   </body>
 </html>
