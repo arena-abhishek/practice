@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular javacript</title>
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  </head>
+  <body>
+    <div ng-app="myApp" ng-controller="personCtrl">
+      <p>The name is {{firstName | upperCase}} </p>
+      <p>The name is {{lastName | upperCase}} </p>
+    </div>
+    <script>
+    angular.module('myApp',[]).controller('personCtrl', function($scope){
+      $scope.firstName = "John",
+      $scope.lastName = "doe"
+    });
+  </script>
+  </body>
+</html>
